@@ -1,0 +1,63 @@
+// This defines all syntax variables that syntax themes must implement when they
+// include a syntax-variables.less file.
+
+// These colors are specific to the theme. Do not use in a package!
+
+@background: #331e3e;
+@default: #ecd1fa;
+@uno1: #f075c7;
+@uno2: #db70b8;
+@uno3: #c6539f;
+@uno4: #b34d90;
+@due1: #f0d175;
+@due2: #dbc170;
+@tre1: #75f0db;
+@broken: #ff6666;
+
+// Terrible mappings below
+
+@white: @background;
+@very-light: lighten(@background, 8%);
+@light: lighten(@background, 16%);
+@gray: darken(@default, 8%);
+@black: @default;
+
+@orange-light: @uno4; // rgb(245, 224, 196)
+@orange-light-trn: fade(@uno3, 20%);
+@orange-medium: @uno1;
+@orange-dark: @uno1;
+@orange-bright: @uno1;
+
+@yellow-light: @due1; // rgb(240, 228, 168)
+@yellow-light-trn: fade(@due1, 15%);
+@yellow-dark: @due1;
+
+@green-light: @tre1; // rgb(224, 232, 186)
+@green-light-trn: fade(@tre1, 20%);
+@green-medium: @tre1;
+@green-dark: @tre1;
+@green-vivid: @tre1;
+@green-bright: @tre1;
+
+@blue-light: #d6e5f1; // rgb(214, 229, 241)
+@blue-light-trn: rgba(115, 185, 255, 0.25);
+@blue-medium: #7992A6;
+@blue-dark: @default;
+@blue-vivid: #0F6CB8;
+@blue-bright: #47A1EB;
+
+@floss-light-trn: darken(spin(@default, -20), 20%);
+@floss-dark: lighten(@default, 8%);
+
+@violet-light: #e6e0f5; // rgb(230, 224, 245)
+@violet-light-trn: rgba(202, 195, 255, 0.40);
+@violet-dark: @uno1;
+@violet-vivid: #714EDA;
+
+@purple-light: #f1ddf0; // rgb(241, 221, 240)
+@purple-light-trn: rgba(220, 155, 250, 0.25);
+@purple-medium: #A984A7;
+@purple-dark: @uno1;
+@purple-vivid: #AF2CA9;
+
+@red-bright: #FB6C6A;

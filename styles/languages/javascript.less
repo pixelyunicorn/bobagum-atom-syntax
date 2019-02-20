@@ -1,0 +1,85 @@
+.syntax--source.syntax--jsx, .syntax--source.syntax--js {
+
+  .syntax--entity.syntax--name.syntax--class, .syntax--entity.syntax--name.syntax--function {
+    .syntax--orange();
+  }
+
+  .syntax--storage.syntax--type {
+    font-weight: bold;
+  }
+
+  .syntax--meta {
+    &.syntax--function-call,
+    &.syntax--method-call {
+      .syntax--entity.syntax--name.syntax--function {
+        // .syntax--reset();
+        .syntax--orange();
+      }
+    }
+  }
+
+  .syntax--meta.syntax--tag {
+    .syntax--entity.syntax--name.syntax--tag {
+      font-weight: bold;
+    }
+
+    .syntax--punctuation.syntax--definition.syntax--tag {
+      color: @gray;
+    }
+  }
+
+  .syntax--meta.syntax--function {
+    .syntax--entity.syntax--name.syntax--function {
+      .syntax--orange();
+    }
+
+    .syntax--storage.syntax--function {
+      font-weight: bold;
+    }
+  }
+
+  .syntax--entity.syntax--other.syntax--attribute-name, .syntax--constant.syntax--key {
+    // .syntax--blue();
+    color: darken(@default, 8%);
+    font-style: italic;
+  }
+
+  .syntax--variable {
+    &.syntax--this {
+      font-style: italic;
+      text-decoration: underline;
+    }
+    &.syntax--other {
+      .syntax--green();
+    }
+  }
+
+  .syntax--storage {
+    &.syntax--var, &.syntax--modifier {
+      font-weight: bold;
+    }
+  }
+
+  .syntax--string {
+
+    &.syntax--regexp, &.syntax--quoted {
+      .syntax--yellow();
+      .syntax--punctuation.syntax--string {
+        color: @default;
+      }
+    }
+  }
+
+  .syntax--keyword.syntax--control {
+    // .syntax--green();
+  }
+
+  .syntax--comment.syntax--block, .syntax--comment.syntax--line {
+    .syntax--floss();
+  }
+
+  .syntax--comment.syntax--block .syntax--comment.syntax--punctuation, .syntax--comment.syntax--line .syntax--comment.syntax--punctuation {
+    background: @uno1;
+  }
+
+}

@@ -1,0 +1,44 @@
+.syntax--perl {
+
+  .syntax--entity.syntax--name {
+    &.syntax--class,
+    &.syntax--function {
+      .syntax--purple();
+    }
+  }
+
+  .syntax--constant.syntax--bareword,
+  .syntax--constant.syntax--other.syntax--key
+  {
+    .syntax--blue();
+  }
+
+
+  .syntax--string.syntax--unquoted.syntax--heredoc {
+      .syntax--green();
+
+      .syntax--punctuation.syntax--definition,
+      .syntax--punctuation.syntax--string {
+          color: @green-medium;
+      }
+  }
+
+  .syntax--storage,
+  .syntax--support {
+    &.syntax--modifier,
+    &.syntax--function,
+    &.syntax--pod,
+    &.syntax--sub {
+      font-weight: bold;
+    }
+  }
+
+  .syntax--documentation,
+  .syntax--pod {
+    // Highlight POD keywords, headings and formatting codes like L<>, C<>.
+    .syntax--variable,
+    .syntax--entity {
+      font-weight: bold;
+    }
+  }
+}

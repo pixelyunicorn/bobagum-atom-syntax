@@ -1,0 +1,46 @@
+.syntax--source.syntax--css {
+
+  // CSS selectors
+  .syntax--meta.syntax--selector .syntax--entity.syntax--name.syntax--tag,
+  .syntax--meta.syntax--selector .syntax--id,
+  // Classes can appear also outside of selectors, for example in less files.
+  .syntax--class:not(.syntax--mixin) {
+    .syntax--purple();
+  }
+
+  .syntax--constant {
+    .syntax--blue();
+    .syntax--punctuation {
+        .syntax--reset();
+        color: @blue-medium;
+    }
+  }
+
+  // .syntax--keyword {
+  //   .syntax--reset();
+  // }
+
+  .syntax--bracket.syntax--curly {
+    color: @gray;
+  }
+
+  .syntax--punctuation {
+    &.syntax--separator,
+    &.syntax--terminator {
+      color: @gray;
+    }
+  }
+
+  .syntax--comment {
+    .syntax--class {
+      .syntax--reset();
+      font-weight: bold;
+    }
+  }
+
+  .syntax--support.syntax--property-name {
+      .syntax--reset();
+      font-weight: bold;
+    }
+
+}
